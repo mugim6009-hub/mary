@@ -1,51 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miss Bright | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ <header>
+    <a href="#" class="logo">Miss<span>Bright</span></a>
+    <ul  class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 
-  <div class="container">
-    <h1>Rock Paper Scissors ✊✋✌️</h1>
-    <p class="subtitle">First to 5 wins!</p>
-
-    <!-- Score Board -->
-    <div class="scoreboard">
-      <div>You: <span id="userScore">0</span></div>
-      <div>Computer: <span id="computerScore">0</span></div>
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+<a href="https://github.com" target="black"><button class="btn">Visit Github</button></a>
+ </header>
+<section id="home" class="home">
+<div class="home-content"> 
+    <h1>Hi, I'm <span>Miss Bright</span></h1>
+    <h3>Fronted Developer</h3> 
+    <p>I build clean, responsive, and beautiful websites with HTML, CSS, and JavaScript</p>
+    <div class="btn-group">
+        <a href="#projects"><button class="btn"></button></a>
+        <a href="#contact"><button class="btn secondary">Contact Me</button></a>
     </div>
-
-    <!-- Result Display -->
-    <div id="result">Make your move</div>
-
-    <!-- Choice Buttons -->
-    <div class="choices">
-      <button class="choice" data-choice="rock">
-        <div class="emoji">✊</div>
-        <span>Rock</span>
-      </button>
-      <button class="choice" data-choice="paper">
-        <div class="emoji">✋</div>
-        <span>Paper</span>
-      </button>
-      <button class="choice" data-choice="scissors">
-        <div class="emoji">✌️</div>
-        <span>Scissors</span>
-      </button>
     </div>
+<div class="home-img">
+    <img src="https://i.pravatar.cc/400?img=5" alt="profile">
+</div>
+</section>
+<section id="about" class="about">
+    <h2 class="heading">About <span>Me</span></h2>
+    <p>I'm a passionate developer from Kenya. I love turning ideas into real,working websites. Currently studying and building projects for Github</p>
+    <div class="skills">
+      <div class="skill"><i class="fa-brands fa-html5></i></div>
 
-    <!-- Show what both picked -->
-    <div class="battle">
-      <div>You picked: <span id="userChoice">-</span></div>
-      <div>Computer picked: <span id="computerChoice">-</span></div>
-    </div>
-
-    <button class="reset" onclick="resetGame()">Reset Game</button>
-  </div>
-
-  <script src="game.js"></script>
+         <div class="skill">
+            <i class="fa-brands fa-css3-alt"></i>CSS</div>
+        <div class="skill">
+            <i class="fa-brands fa-js"></i>JavaScript</div>
+            <div class="skill"><i class="fa-brands fa-github"></i></i>
+            </div>
+        </div>
+</section>
+<section id="projects" class="projects">
+<h2 class="heading"><span>Project</span></section></h2>
+<div class="project-grid">
+<div class="project-card">
+<h3>Todo App</h3>
+<p>Javascript todo app with local storage and dark mode</p>
+    <a href="#">View Code</a>
+</div>
+<div class="project-card">
+<h3>Landing Page</h3>
+<p>Modern landing page with animations and gradient UI.</p>
+ <a href="#">View Code</a>
+</div>
+</div>
+</section>
+<section id="contact" class="contact">
+    <h2 class="heading">Contact <span>Me</span></h2>
+    <form id="contact-form">
+        <input type="test" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placehoder="Your Message" rows="5" required></textarea>
+    </form>
+</section>
+<footer>
+    <p>&copy 2026 Miss Bright. Built with &hearts and code</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
