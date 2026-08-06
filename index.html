@@ -1,64 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scientific Calculator</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" id="display" value="0" readonly>
 
-  <div class="buttons">
-    <!-- Row 1: Scientific -->
-    <button class="sci" onclick="addFunction('sin(')">sin</button>
-    <button class="sci" onclick="addFunction('cos(')">cos</button>
-    <button class="sci" onclick="addFunction('tan(')">tan</button>
-    <button class="sci" onclick="addFunction('log(')">log</button>
-    <button class="sci" onclick="addFunction('ln(')">ln</button>
+  <div class="container">
+    <h1>Rock Paper Scissors ✊✋✌️</h1>
+    <p class="subtitle">First to 5 wins!</p>
 
-    <!-- Row 2: Scientific -->
-    <button class="sci" onclick="addFunction('sqrt(')">√</button>
-    <button class="sci" onclick="addToDisplay('^')">x^y</button>
-    <button class="sci" onclick="addToDisplay('(')">(</button>
-    <button class="sci" onclick="addToDisplay(')')">)</button>
-    <button class="sci" onclick="addToDisplay('3.14159')">π</button>
+    <!-- Score Board -->
+    <div class="scoreboard">
+      <div>You: <span id="userScore">0</span></div>
+      <div>Computer: <span id="computerScore">0</span></div>
+    </div>
 
-    <!-- Row 3: Functions -->
-    <button class="clear" onclick="clearAll()">AC</button>
-    <button class="func" onclick="backspace()">DEL</button>
-    <button class="func" onclick="percentage()">%</button>
-    <button class="func" onclick="addFunction('1/')">1/x</button>
-    <button class="op" onclick="addToDisplay('/')">÷</button>
+    <!-- Result Display -->
+    <div id="result">Make your move</div>
 
-    <!-- Row 4: Numerics 7 8 9 -->
-    <button class="num" onclick="addToDisplay('7')">7</button>
-    <button class="num" onclick="addToDisplay('8')">8</button>
-    <button class="num" onclick="addToDisplay('9')">9</button>
-    <button class="op" onclick="addToDisplay('*')">×</button>
-    <button class="sci" onclick="addFunction('pow(,2)')">x²</button>
+    <!-- Choice Buttons -->
+    <div class="choices">
+      <button class="choice" data-choice="rock">
+        <div class="emoji">✊</div>
+        <span>Rock</span>
+      </button>
+      <button class="choice" data-choice="paper">
+        <div class="emoji">✋</div>
+        <span>Paper</span>
+      </button>
+      <button class="choice" data-choice="scissors">
+        <div class="emoji">✌️</div>
+        <span>Scissors</span>
+      </button>
+    </div>
 
-    <!-- Row 5: Numerics 4 5 6 -->
-    <button class="num" onclick="addToDisplay('4')">4</button>
-    <button class="num" onclick="addToDisplay('5')">5</button>
-    <button class="num" onclick="addToDisplay('6')">6</button>
-    <button class="op" onclick="addToDisplay('-')">−</button>
-    <button class="sci" onclick="addFunction('pow(,3)')">x³</button>
+    <!-- Show what both picked -->
+    <div class="battle">
+      <div>You picked: <span id="userChoice">-</span></div>
+      <div>Computer picked: <span id="computerChoice">-</span></div>
+    </div>
 
-    <!-- Row 6: Numerics 1 2 3 -->
-    <button class="num" onclick="addToDisplay('1')">1</button>
-    <button class="num" onclick="addToDisplay('2')">2</button>
-    <button class="num" onclick="addToDisplay('3')">3</button>
-    <button class="op" onclick="addToDisplay('+')">+</button>
-    <button class="sci" onclick="addToDisplay('.')">.</button>
-
-    <!-- Row 7: 0 -->
-    <button class="num" style="grid-column: span 3;" onclick="addToDisplay('0')">0</button>
-    <button class="equals" onclick="calculate()">=</button>
+    <button class="reset" onclick="resetGame()">Reset Game</button>
   </div>
 
-</div>
-<script src="script.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>
