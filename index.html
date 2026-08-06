@@ -3,74 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peace Restraunt</title>
+    <title>Scientific Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body><header id="main-header">
-  <h1 id="logo" align="center">Peace Restraunt</h1>
-<nav id="navbar">
-<ul class="nav-links">
-<li href="#">HOMe</li>
-<li href="#menu">MENU</li>
-<li href="#contact">CONTACT</li>
-</ul>
-</nav>
-</header>
-<main>
-  <selection class="banner">
-    <div class="banner-test">
-    <h2>Welcome to Peace Restraunt</h2>
-<p>We are a family-friendly restraunt offering delicious delicacies come all and taste the best food in Kenya.<br> and the aunthentic flavours each ingridient entails<br>spice up your taste buds with our unique dishes.</p>
- <a href="#menu" class="btn">view our menu</a> 
-</div>
-</selection>
-<main><selection class="welcome">
-  <h2>Welcome to peace restraunt</h2>
-  <p>We serve amazing delicacies that are sure to blow your mind and bring you back for more.<br> Our chefs are highly skilled and use only the freshest ingridients to create mouth-watering dishes that will leave you mesmerisized.<br> Come and experience the best dishes in town and let us take you on a culinary journey that you will never forget.<br> We are committed to provide the beSt for you.
-  </p>
-   <p>Our Signature Dish is a mouth watering delicacy that will tantalize your mouth.</p>
-  <img src="food.jpg" alt="Delicious Dish">
-</selection>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" value="0" readonly>
 
+  <div class="buttons">
+    <!-- Row 1: Scientific -->
+    <button class="sci" onclick="addFunction('sin(')">sin</button>
+    <button class="sci" onclick="addFunction('cos(')">cos</button>
+    <button class="sci" onclick="addFunction('tan(')">tan</button>
+    <button class="sci" onclick="addFunction('log(')">log</button>
+    <button class="sci" onclick="addFunction('ln(')">ln</button>
 
-<selection id="menu">
-  <h2>Our Menu</h2>
-<div class="menu-container">
-  <div class="menu-item">
-     <h2>chips chicken</h2>
-    <p>Grilled chicken served with chips with a side of salad.</p>
-  <span class="price">
+    <!-- Row 2: Scientific -->
+    <button class="sci" onclick="addFunction('sqrt(')">√</button>
+    <button class="sci" onclick="addToDisplay('^')">x^y</button>
+    <button class="sci" onclick="addToDisplay('(')">(</button>
+    <button class="sci" onclick="addToDisplay(')')">)</button>
+    <button class="sci" onclick="addToDisplay('3.14159')">π</button>
+
+    <!-- Row 3: Functions -->
+    <button class="clear" onclick="clearAll()">AC</button>
+    <button class="func" onclick="backspace()">DEL</button>
+    <button class="func" onclick="percentage()">%</button>
+    <button class="func" onclick="addFunction('1/')">1/x</button>
+    <button class="op" onclick="addToDisplay('/')">÷</button>
+
+    <!-- Row 4: Numerics 7 8 9 -->
+    <button class="num" onclick="addToDisplay('7')">7</button>
+    <button class="num" onclick="addToDisplay('8')">8</button>
+    <button class="num" onclick="addToDisplay('9')">9</button>
+    <button class="op" onclick="addToDisplay('*')">×</button>
+    <button class="sci" onclick="addFunction('pow(,2)')">x²</button>
+
+    <!-- Row 5: Numerics 4 5 6 -->
+    <button class="num" onclick="addToDisplay('4')">4</button>
+    <button class="num" onclick="addToDisplay('5')">5</button>
+    <button class="num" onclick="addToDisplay('6')">6</button>
+    <button class="op" onclick="addToDisplay('-')">−</button>
+    <button class="sci" onclick="addFunction('pow(,3)')">x³</button>
+
+    <!-- Row 6: Numerics 1 2 3 -->
+    <button class="num" onclick="addToDisplay('1')">1</button>
+    <button class="num" onclick="addToDisplay('2')">2</button>
+    <button class="num" onclick="addToDisplay('3')">3</button>
+    <button class="op" onclick="addToDisplay('+')">+</button>
+    <button class="sci" onclick="addToDisplay('.')">.</button>
+
+    <!-- Row 7: 0 -->
+    <button class="num" style="grid-column: span 3;" onclick="addToDisplay('0')">0</button>
+    <button class="equals" onclick="calculate()">=</button>
   </div>
-</div></selection>
 
-</main>
-
-
-
-
-
-
-
-
-<footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-column">
-      <h2>about us</h2>
-      <p>we are peace restraunt</p>
-  </div>
-<div class="footer-column">
-  <h3>quick links</h3>
-<ul><li><a href="#">home</a></li>
-<li><a href="#">services</a></li>
-<li><a href="#">contact</a></li>
-</ul>
 </div>
-<div class="footer-column">
-  <h2>contant</h2>
-  <p>Thika, Kenya</p>
-  <p>info@peacereastraunt.com</p>
-</div>
-</div>
-</footer>
+<script src="script.js"></script>
 </body>
 </html>
